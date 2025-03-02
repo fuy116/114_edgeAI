@@ -2,13 +2,13 @@ import os
 import pickle
 import pandas as pd
 
-
+#資料路徑處理
 BASE_PATH = os.path.join(os.path.dirname(__file__), 'WESAD')
-output_path = os.path.join("..", "processed_data", "sisfall_data.npz")
+
 
 all_data = []
 
-print(os.getcwd())
+# 讀取受試者S2~S17的資料
 for i in range(2, 18):
     if i == 12: 
         continue
@@ -50,7 +50,7 @@ def sample_data(group):
             raise ValueError(f"受試者 {group['Subject'].iloc[0]} 的 Label {label} 資料不足 40 筆，僅有 {len(label_data)} 筆。")
     return pd.concat(samples)
 
-# 按照受試者分組，並對每個組別應用抽樣函數
+# 按照受試者分組，並對每個組別應用抽樣函數  
 sampled_data = full_data.groupby('Subject').apply(sample_data).reset_index(drop=True)
 
 # 輸出data
@@ -58,5 +58,3 @@ sampled_data = full_data.groupby('Subject').apply(sample_data).reset_index(drop=
 
 output_path = os.path.join(BASE_PATH, "data.csv")  # 存在 WESAD 資料夾內
 sampled_data.to_csv(output_path, index=False)
-
-#sampled_data.to_csv("data.csv", index=False)
