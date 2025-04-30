@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Counting</title>
+</head>
+<body>
+<h1>人數資料：</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Elevator ID</th>
+            <th>Inside_Count</th>
+            <th>Outside_Count</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody id="peopleData"></tbody>
+</table>
+<script>
+    fetch('/api/people-counting')
+        .then(response => response.json())
+        .then(data => {
+            const latestEntry = data[data.length - 1];
+            const peopleDataElement = document.getElementById('peopleData');
+            console.log(latestEntry);
+            const row = `
+                <tr>
+                    <td>${latestEntry.elevator_id}</td>
+                    <td>${latestEntry.inside_count}</td>
+                    <td>${latestEntry.outside_count}</td>
+                    <td>${new Date(latestEntry.time).toLocaleString()}</td>
+                </tr>
+            `;
+            peopleDataElement.innerHTML = row;
+        })
+        .catch(error => console.error('發生錯誤:', error));
+</script>
+</body>
+</html>
+

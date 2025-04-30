@@ -1,10 +1,26 @@
-all:
-	gcc -O3 -lmysqlclient db-server.c db.c -o db-server && \
-	gcc -O3 -lmysqlclient web-server.c db.c -o web-server
+SUBDIRS := db-server web-server
 
-run-server:
-	sudo ./web-server &
-	sudo ./db-server &
+.PHONY: all clean $(SUBDIRS)
+
+all: $(SUBDIRS)
+
+$(SUBDIRS):
+	$(MAKE) -C $@
+
+clean:
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $$dir clean; \
+	done
+
+run-web:
+	cd web-server && sudo ./bin/web-server
+
+run-db:
+	sudo ./db-server/bin/db-server
+
+stop:
+	sudo pkill -f web-server	
 
 check-port:
 	sudo netstat -tulnp
+
