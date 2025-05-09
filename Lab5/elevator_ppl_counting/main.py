@@ -43,6 +43,7 @@ class Client():
 
     def run(self):
         # set box (ROI)
+        self.cap = cv2.VideoCapture("original_video/full.mp4")
         roi_startX, roi_startY, roi_endX, roi_endY = 180, 100, 730, 400
         elevator_startX, elevator_endX, elevator_startY, elevator_endY = 185, 350, 80, 390
 
@@ -56,7 +57,6 @@ class Client():
 
         start_time = time.time()
         current_time = start_time
-
 
         while True:
             # Read Frame
@@ -164,6 +164,7 @@ class Client():
                 ppl_outside = ppl_count
                 cv2.putText(frame, f"People in outside: {ppl_outside}", (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
+            #print(f"inside:{max_inside}, outside:{ppl_outside}\n");
             #self.client_socket.send(str())
             #cv2.putText(frame, f"Overlap Ratio: {overlap_ratio}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
@@ -179,7 +180,8 @@ class Client():
 
 def main():
     client = Client()
-    client.run()
+    while True:
+        client.run()
 
 if __name__ == '__main__':
     main()

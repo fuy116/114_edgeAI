@@ -12,11 +12,15 @@ clean:
 		$(MAKE) -C $$dir clean; \
 	done
 
-run-web:
-	cd web-server && sudo ./bin/web-server
+run: run-db run-pred
+# run-web:
+# 	cd web-server && sudo ./bin/web-server
 
 run-db:
-	sudo ./db-server/bin/db-server
+	sudo sh -c "./db-server/bin/db-server &"
+
+run-pred:
+	cd elevator_ppl_counting && python main.py
 
 stop:
 	sudo pkill -f web-server	

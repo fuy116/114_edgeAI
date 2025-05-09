@@ -60,7 +60,6 @@ int main() {
     printf("Server is running on http://127.0.0.1:%d\n", PORT);
 
     char output_buffer[5000];
-    char result[5000];
     char elevator_id[3];
     char inside_count[3];
     char outside_count[3];

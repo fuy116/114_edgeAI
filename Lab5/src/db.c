@@ -1,5 +1,8 @@
 #include "db.h"
+#include "read_env.h"
+
 #include <string.h>
+#include <stdlib.h>
 
 int db_init(db_t *self)
 {
@@ -8,17 +11,19 @@ int db_init(db_t *self)
         fprintf(stderr, "mysql_init() failed(): %s\n", mysql_error(self->conn));
         return EXIT_FAILURE;
     }
+    load_env(".env");
     return EXIT_SUCCESS;
 }
 
-int db_connect(db_t *self)
-{
-    if (mysql_real_connect(self->conn, "localhost", "root", "vope", 
-                           "edge_ai", 0, NULL, 0) == NULL) {
-        fprintf(stderr, "mysql_real_connect() failed: %s\n", mysql_error(self->conn));
-        mysql_close(self->conn);
-        return EXIT_FAILURE;
-    }
+int db_connect(db_t *self) {
+  if (mysql_real_connect(self->conn, getenv("DB_IP"), getenv("DB_USR"),
+                         getenv("DB_PWD"), getenv("DB_NAME"),
+                         atoi(getenv("DB_PORT")), NULL, 0) == NULL) {
+    fprintf(stderr, "mysql_real_connect() failed: %s\n",
+            mysql_error(self->conn));
+    mysql_close(self->conn);
+    return EXIT_FAILURE;
+  }
     return EXIT_SUCCESS;
 }
 

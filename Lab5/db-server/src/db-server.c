@@ -16,10 +16,11 @@
 #define PORT 4500
 
 int main() {
-    CREATE_DB_STRUCT(my_db); 
+    CREATE_DB_STRUCT(my_db);
 
     my_db.init(&my_db);
-    my_db.connect(&my_db);   
+    printf("databases connecting\n");
+    my_db.connect(&my_db);
 
     int server_fd, conn_socket;
     struct sockaddr_in address;
@@ -49,22 +50,23 @@ int main() {
     CHECK_ERROR(conn_socket, "accept");
     printf("Client connected!\n");
 
-    while (1) {
+    while (1) 
+    {
         memset(buffer, 0, sizeof(buffer));
 
         int bytes_read = read(conn_socket, buffer, sizeof(buffer) - 1);
         if (bytes_read > 0) {
-            printf("Received: %s\n", buffer);
-            my_db.query(&my_db, buffer);   
-            // reply
-            //char *response = "Message received";
-            //send(conn_socket, response, strlen(response), 0);
+          printf("Received: %s\n", buffer);
+          my_db.query(&my_db, buffer);
+          // reply
+          // char *response = "Message received";
+          // send(conn_socket, response, strlen(response), 0);
         } else if (bytes_read == 0) {
-            printf("Client closed the connection.\n");
-            break; // client close connection
+          printf("Client closed the connection.\n");
+          //break; // client close connection
         } else {
-            perror("read error");
-            break;
+          perror("read error");
+          break;
         }
     }
 
@@ -72,4 +74,3 @@ int main() {
     close(server_fd);
     return 0;
 }
-

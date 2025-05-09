@@ -1,5 +1,6 @@
 # python_client.py
 import socket
+import time
 
 class Socket:
     def __init__(self):
@@ -9,12 +10,18 @@ class Socket:
     def conn(self, address='127.0.0.1', port=4500):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_address = (address, port)
-        try:
-            self.client_socket.connect(server_address)
-            print("Connection successful")
+        while True:
+            try:
+                self.client_socket.connect((address, port))
+                print(f"Connected to {address} on port {port}")
+                return
 
-        except socket.error as e:
-            print(f"Connection failed: {e}")
+            except socket.error as e:
+                print(f"Connection failed: {e}. Retrying in 2 seconds...")
+                time.sleep(2)  
+            except socket.timeout:
+                print(f"Connection timed out. Retrying in 2 seconds...")
+                time.sleep(2) 
 
     def send(self, data):
         try:
