@@ -10,17 +10,21 @@ $(SUBDIRS):
 clean:
 	for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir clean; \
-	done
+		done
 
 run: run-db run-pred
-# run-web:
-# 	cd web-server && sudo ./bin/web-server
+
+run-web:
+	sudo ./web-server/bin/web-server
 
 run-db:
-	sudo sh -c "./db-server/bin/db-server &"
+	sudo ./db-server/bin/db-server
 
 run-pred:
 	cd elevator_ppl_counting && python main.py
+
+run-gui:
+	./gui-monitor/bin/monitor
 
 stop:
 	sudo pkill -f web-server	
