@@ -89,7 +89,7 @@ int main() {
 
     memset(buffer, 0, sizeof(buffer));
     read(client_fd, buffer, sizeof(buffer));
-    printf("Received request:\n%s\n", buffer);
+    // printf("Received request:\n%s\n", buffer);
 
     if (strncmp(buffer, "GET /api/people-counting", 24) == 0) {
       const char *response_header = "HTTP/1.1 200 OK\r\n"

@@ -82,12 +82,13 @@
         const res = await fetch('/api/people-counting');
         const data = await res.json();
         // Expected: { elevator_id, internal, external, date, time }
-        console.log(res, data);
         document.getElementById('elevator-id').textContent = `Elevator ID: ${data[0].elevator_id}`;
         document.getElementById('datetime').textContent = `Time: ${data[0].time}`;
 
         updateThermometer('internal', data[0].inside_count);
         updateThermometer('external', data[0].outside_count);
+        
+        //console.log(data[0].elevator_id, data[0].time, data[0].inside_count, data[0].outside_count);
 
       } catch (err) {
         console.error('Error fetching data:', err);
@@ -107,9 +108,8 @@
       document.getElementById(`${type}-label`).textContent = `${type === 'internal' ? 'Inside' : 'Outside'}: ${count}`;
     }
 
-    // Fetch immediately and then every second
     fetchData();
-    setInterval(fetchData, 1000);
+    setInterval(fetchData, 500);
   </script>
 </body>
 </html>

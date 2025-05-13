@@ -42,6 +42,9 @@ class Client():
         return overlap_ratio
 
     def run(self):
+        update_query = f"TRUNCATE TABLE people_counting;"
+        self.client_socket.send(update_query)
+
         # set box (ROI)
         self.cap = cv2.VideoCapture("original_video/full.mp4")
         roi_startX, roi_startY, roi_endX, roi_endY = 180, 100, 730, 400
@@ -57,6 +60,7 @@ class Client():
 
         start_time = time.time()
         current_time = start_time
+        elevator_doors_open = False
 
         while True:
             # Read Frame
@@ -169,6 +173,11 @@ class Client():
             #cv2.putText(frame, f"Overlap Ratio: {overlap_ratio}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
             cv2.putText(frame, f"People in elevator: {max_inside}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
+            # Show real-time frame
+            cv2.imshow("Real-Time Detection", frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
 
             # self.output_video.write(frame)
 
