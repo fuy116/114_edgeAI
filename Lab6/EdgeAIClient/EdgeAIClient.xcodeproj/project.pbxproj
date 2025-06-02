@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6EDCD0C2DEDC4B60019B905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6EDCD012DEDC4B60019B905 /* Assets.xcassets */; };
+		A6F1E0502DEDBB7A0091EE54 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A6F1E04F2DEDBB7A0091EE54 /* Alamofire */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6F1E0322DEDB7E70091EE54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F1E01A2DEDB7E40091EE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6F1E0212DEDB7E40091EE54;
+			remoteInfo = EdgeAIClient;
+		};
+		A6F1E03C2DEDB7E70091EE54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F1E01A2DEDB7E40091EE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6F1E0212DEDB7E40091EE54;
+			remoteInfo = EdgeAIClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A6EDCD012DEDC4B60019B905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6F1E0222DEDB7E40091EE54 /* EdgeAIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdgeAIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F1E0312DEDB7E70091EE54 /* EdgeAIClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgeAIClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F1E03B2DEDB7E70091EE54 /* EdgeAIClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdgeAIClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A6F1E0242DEDB7E40091EE54 /* EdgeAIClient */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EdgeAIClient;
+			sourceTree = "<group>";
+		};
+		A6F1E0342DEDB7E70091EE54 /* EdgeAIClientTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EdgeAIClientTests;
+			sourceTree = "<group>";
+		};
+		A6F1E03E2DEDB7E70091EE54 /* EdgeAIClientUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EdgeAIClientUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6F1E01F2DEDB7E40091EE54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F1E0502DEDBB7A0091EE54 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E02E2DEDB7E70091EE54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E0382DEDB7E70091EE54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6F1E0192DEDB7E40091EE54 = {
+			isa = PBXGroup;
+			children = (
+				A6EDCD012DEDC4B60019B905 /* Assets.xcassets */,
+				A6F1E0242DEDB7E40091EE54 /* EdgeAIClient */,
+				A6F1E0342DEDB7E70091EE54 /* EdgeAIClientTests */,
+				A6F1E03E2DEDB7E70091EE54 /* EdgeAIClientUITests */,
+				A6F1E0232DEDB7E40091EE54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6F1E0232DEDB7E40091EE54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6F1E0222DEDB7E40091EE54 /* EdgeAIClient.app */,
+				A6F1E0312DEDB7E70091EE54 /* EdgeAIClientTests.xctest */,
+				A6F1E03B2DEDB7E70091EE54 /* EdgeAIClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6F1E0212DEDB7E40091EE54 /* EdgeAIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6F1E0452DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClient" */;
+			buildPhases = (
+				A6F1E01E2DEDB7E40091EE54 /* Sources */,
+				A6F1E01F2DEDB7E40091EE54 /* Frameworks */,
+				A6F1E0202DEDB7E40091EE54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A6F1E0242DEDB7E40091EE54 /* EdgeAIClient */,
+			);
+			name = EdgeAIClient;
+			packageProductDependencies = (
+				A6F1E04F2DEDBB7A0091EE54 /* Alamofire */,
+			);
+			productName = EdgeAIClient;
+			productReference = A6F1E0222DEDB7E40091EE54 /* EdgeAIClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6F1E0302DEDB7E70091EE54 /* EdgeAIClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6F1E0482DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClientTests" */;
+			buildPhases = (
+				A6F1E02D2DEDB7E70091EE54 /* Sources */,
+				A6F1E02E2DEDB7E70091EE54 /* Frameworks */,
+				A6F1E02F2DEDB7E70091EE54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6F1E0332DEDB7E70091EE54 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A6F1E0342DEDB7E70091EE54 /* EdgeAIClientTests */,
+			);
+			name = EdgeAIClientTests;
+			packageProductDependencies = (
+			);
+			productName = EdgeAIClientTests;
+			productReference = A6F1E0312DEDB7E70091EE54 /* EdgeAIClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A6F1E03A2DEDB7E70091EE54 /* EdgeAIClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6F1E04B2DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClientUITests" */;
+			buildPhases = (
+				A6F1E0372DEDB7E70091EE54 /* Sources */,
+				A6F1E0382DEDB7E70091EE54 /* Frameworks */,
+				A6F1E0392DEDB7E70091EE54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6F1E03D2DEDB7E70091EE54 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A6F1E03E2DEDB7E70091EE54 /* EdgeAIClientUITests */,
+			);
+			name = EdgeAIClientUITests;
+			packageProductDependencies = (
+			);
+			productName = EdgeAIClientUITests;
+			productReference = A6F1E03B2DEDB7E70091EE54 /* EdgeAIClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6F1E01A2DEDB7E40091EE54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					A6F1E0212DEDB7E40091EE54 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					A6F1E0302DEDB7E70091EE54 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = A6F1E0212DEDB7E40091EE54;
+					};
+					A6F1E03A2DEDB7E70091EE54 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = A6F1E0212DEDB7E40091EE54;
+					};
+				};
+			};
+			buildConfigurationList = A6F1E01D2DEDB7E40091EE54 /* Build configuration list for PBXProject "EdgeAIClient" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6F1E0192DEDB7E40091EE54;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A6F1E04E2DEDBB7A0091EE54 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A6F1E0232DEDB7E40091EE54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6F1E0212DEDB7E40091EE54 /* EdgeAIClient */,
+				A6F1E0302DEDB7E70091EE54 /* EdgeAIClientTests */,
+				A6F1E03A2DEDB7E70091EE54 /* EdgeAIClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6F1E0202DEDB7E40091EE54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6EDCD0C2DEDC4B60019B905 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E02F2DEDB7E70091EE54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E0392DEDB7E70091EE54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6F1E01E2DEDB7E40091EE54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E02D2DEDB7E70091EE54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6F1E0372DEDB7E70091EE54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6F1E0332DEDB7E70091EE54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6F1E0212DEDB7E40091EE54 /* EdgeAIClient */;
+			targetProxy = A6F1E0322DEDB7E70091EE54 /* PBXContainerItemProxy */;
+		};
+		A6F1E03D2DEDB7E70091EE54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6F1E0212DEDB7E40091EE54 /* EdgeAIClient */;
+			targetProxy = A6F1E03C2DEDB7E70091EE54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A6F1E0432DEDB7E70091EE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A6F1E0442DEDB7E70091EE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6F1E0462DEDB7E70091EE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6F1E0472DEDB7E70091EE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A6F1E0492DEDB7E70091EE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdgeAIClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EdgeAIClient";
+			};
+			name = Debug;
+		};
+		A6F1E04A2DEDB7E70091EE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EdgeAIClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EdgeAIClient";
+			};
+			name = Release;
+		};
+		A6F1E04C2DEDB7E70091EE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdgeAIClient;
+			};
+			name = Debug;
+		};
+		A6F1E04D2DEDB7E70091EE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KWBS6NBZGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amk3y.EdgeAIClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EdgeAIClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6F1E01D2DEDB7E40091EE54 /* Build configuration list for PBXProject "EdgeAIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6F1E0432DEDB7E70091EE54 /* Debug */,
+				A6F1E0442DEDB7E70091EE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6F1E0452DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6F1E0462DEDB7E70091EE54 /* Debug */,
+				A6F1E0472DEDB7E70091EE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6F1E0482DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6F1E0492DEDB7E70091EE54 /* Debug */,
+				A6F1E04A2DEDB7E70091EE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6F1E04B2DEDB7E70091EE54 /* Build configuration list for PBXNativeTarget "EdgeAIClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6F1E04C2DEDB7E70091EE54 /* Debug */,
+				A6F1E04D2DEDB7E70091EE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A6F1E04E2DEDBB7A0091EE54 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A6F1E04F2DEDBB7A0091EE54 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F1E04E2DEDBB7A0091EE54 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A6F1E01A2DEDB7E40091EE54 /* Project object */;
+}

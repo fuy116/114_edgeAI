@@ -13,8 +13,8 @@ class Client():
         #self.output_video = cv2.VideoWriter('output_video.mp4', cv2.VideoWriter_fourcc(*'MP4V'), 30, (int(self.cap.get(3)), int(self.cap.get(4))), True)
 
         # client_socket instance
-        self.client_socket = client.Socket()
-        self.client_socket.conn()
+        #self.client_socket = client.Socket()
+        #self.client_socket.conn()
 
         # Confirm whether the model has been introduced
         if self.net.empty():
@@ -73,7 +73,7 @@ class Client():
                                 outside_count = {ppl_outside}, \
                                 time = CURRENT_TIMESTAMP;"
 
-                self.client_socket.send(update_query)
+                #self.client_socket.send(update_query)
                 start_time = current_time
 
             door_roi = frame[door_marker_y - door_marker_radius: door_marker_y + door_marker_radius, door_marker_x - door_marker_radius: door_marker_x + door_marker_radius]
@@ -169,6 +169,9 @@ class Client():
             #cv2.putText(frame, f"Overlap Ratio: {overlap_ratio}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
             cv2.putText(frame, f"People in elevator: {max_inside}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.imshow("Real-Time Detection", frame)
+            if cv2.waitKey(30) & 0XFF == ord('q'):
+                break
 
             # self.output_video.write(frame)
 
@@ -180,8 +183,7 @@ class Client():
 
 def main():
     client = Client()
-    while True:
-        client.run()
+    client.run()
 
 if __name__ == '__main__':
     main()
